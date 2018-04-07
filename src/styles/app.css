@@ -1,0 +1,36 @@
+/*@import 'node_modules/antd/dist/antd.css';*/
+
+.app-root-element {
+    height: 100%;
+}
+
+#rootElement .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+#rootElement .trigger:hover {
+  color: #108ee9;
+}
+
+#rootElement .logo {
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px;
+}
+
+#rootElement .ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+}
+
+#rootElement .ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+#rootElement .ant-layout {
+    height: 100%;
+}

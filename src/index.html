@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <base id="react_page_base" href="/www/"> -->
+        <script type="text/javascript">
+            var currLoc = window.location.href;
+            var absolutePath = currLoc.match(/.*\/www/);
+
+            var baseEle = document.createElement("base");
+            baseEle.async = false;
+            baseEle.href = absolutePath + '/';
+            document.getElementsByTagName("head")[0].appendChild(baseEle);
+
+            var cssEle = document.createElement("link");
+            cssEle.async = true;
+            cssEle.href = "<%= htmlWebpackPlugin.files.chunks.app.css %>";
+            cssEle.rel = "stylesheet";
+            cssEle.type = "text/css";
+            document.getElementsByTagName("head")[0].appendChild(cssEle);
+
+        </script>
+        <title>Hello React!</title>
+        <!-- <link href="<%= htmlWebpackPlugin.files.chunks.app.css %>" rel="stylesheet" type="text/css"/> -->
+    </head>
+    <body>
+        <div id="rootElement" class="app-root-element"></div>
+        <!-- Main -->
+        <!-- <script src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.manifest.entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script> -->
+        <script>
+            var vendorScriptEle = document.createElement("script");
+            vendorScriptEle.async = false;
+            vendorScriptEle.src = "<%= htmlWebpackPlugin.files.js[0] %>";
+            document.getElementsByTagName("body")[0].appendChild(vendorScriptEle);
+
+            var manifestScriptEle = document.createElement("script");
+            manifestScriptEle.async = false;
+            manifestScriptEle.src = "<%= htmlWebpackPlugin.files.chunks.manifest.entry %>";
+            document.getElementsByTagName("body")[0].appendChild(manifestScriptEle);
+
+            var commonScriptEle = document.createElement("script");
+            commonScriptEle.async = false;
+            commonScriptEle.src = "<%= htmlWebpackPlugin.files.chunks.common.entry %>";
+            document.getElementsByTagName("body")[0].appendChild(commonScriptEle);
+
+            var appScriptEle = document.createElement("script");
+            appScriptEle.async = false;
+            appScriptEle.src = "<%= htmlWebpackPlugin.files.chunks.app.entry %>";
+            document.getElementsByTagName("body")[0].appendChild(appScriptEle);
+        </script>
+    </body>
+</html>

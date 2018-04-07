@@ -1,0 +1,16 @@
+{
+    "presets": [
+        ["es2015", {
+            "modules": false
+        }], "react"
+    ],
+    "plugins": [
+        ["transform-runtime"],
+        ["react-hot-loader/babel"],
+        ["syntax-dynamic-import"],
+        ["import", {
+            libraryName: "antd",
+            style: "css"
+        }] // `style: true` 会加载 less 文件
+    ]
+}

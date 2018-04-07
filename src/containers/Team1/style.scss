@@ -1,0 +1,28 @@
+/*.test {
+    color: lime;
+}*/
+
+/*#Team1{*/
+#team1{
+    .header{
+        margin: 12px 0;
+    }
+    .content1{
+        color: lime;
+        padding: 24px;
+        background: #fff;
+        min-height: 260px;
+        .initCount{
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .table{
+            border: 1px solid red;
+        }
+    }
+/*    .content2{
+        border: 1px solid red;
+    }*/
+}
+
+/*}*/
