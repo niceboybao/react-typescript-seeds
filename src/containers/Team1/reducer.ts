@@ -1,7 +1,7 @@
-import {createAction, handleActions, Action} from 'redux-actions';
+import { createAction, handleActions, Action } from 'redux-actions';
 
 // 最外层constants 统一命名
-import {RN_TEAM1} from '../../constants';
+import { RN_TEAM1 } from '../../constants';
 //组件的 constants
 import {
     INCREMENT,
@@ -19,6 +19,7 @@ export const name = RN_TEAM1;
 export const team1Reducer = handleActions({
     //计数器方法+
     [INCREMENT]: (state, action: Action<number>) => {
+        debugger;
         return Object.assign({}, state, {
             count: state.count + action.payload
         });
@@ -36,7 +37,7 @@ export const team1Reducer = handleActions({
             count: action.payload
         });
     },
-    
+
     //获取数据方法
     [REQUESTDATASUCCESS]: (state, action: Action<any>) => {
         return Object.assign({}, state, {
