@@ -65,4 +65,35 @@ export default function createRoutes() {
             component: Team5
         },
     ];
+
+    // const chooseProducts = (location, cb) => {
+    //     require.ensure([], require => {
+    //         cb(null, require('../Component/chooseProducts').default)
+    //     },'chooseProducts')
+    // }
+    //
+    // const helpCenter = (location, cb) => {
+    //     require.ensure([], require => {
+    //         cb(null, require('../Component/helpCenter').default)
+    //     },'helpCenter')
+    // }
+    //
+    // const saleRecord = (location, cb) => {
+    //     require.ensure([], require => {
+    //         cb(null, require('../Component/saleRecord').default)
+    //     },'saleRecord')
+    // }
+    //
+    // const RouteConfig = (
+    //     <Router history={history}>
+    //         <Route path="/" component={Roots}>
+    //             <IndexRoute component={index} />//首页
+    //             <Route path="index" component={index} />
+    //             <Route path="helpCenter" getComponent={helpCenter} />//帮助中心
+    //             <Route path="saleRecord" getComponent={saleRecord} />//销售记录
+    //             <Redirect from='*' to='/'  />
+    //         </Route>
+    //     </Router>
+    // );
+
 }
