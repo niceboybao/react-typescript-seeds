@@ -80,7 +80,6 @@ $ npm run clean
 - ~~add code chunk report when do dev build~~
 - Jenkinsfile
 - ~~build process optimize~~
-- unit test
 
 ## License
 
